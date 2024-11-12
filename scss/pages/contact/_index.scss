@@ -1,4 +1,8 @@
 @use '../../abstracts/variables';
 @use '../../abstracts/mixins';
-
+@forward 'apropos';
+@forward 'adresse';
+@forward 'map';
+@forward 'secteur';
 @forward 'contact';
+

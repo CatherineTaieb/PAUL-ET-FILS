@@ -2,60 +2,68 @@
 @use '../../abstracts/mixins';
 
 
+.contact{
+color: variables.$secondary-color;
+@include mixins.flex-center;
 
-/* FORMULAIRE DE CONTACT */
-
-  
-.formulaire {
-    background-color: variables.$secondary-color ;
-    border: ridge variables.$tertiary-color;
-    border-radius: 10%;
-    margin: 32px auto;
-    width: 80%;
-
-    @media (min-width:600px){
-        width: 50%;
+    @media(min-width: 600px){
+        flex-direction: row;
     }
-    
-    ul {
-
-        li {
-            margin-bottom: variables.$padding-base;
-            @include mixins.flex-center;
 
 
-            label {
-                font-weight: bold;
-                font-size: 1.2rem;
-                padding: 8px 0 ;
 
-                @media (min-width:600px){
-                    padding: 10px 0;
+    &__header{
+        @include mixins.flex-center;
+        text-align: center;
+        padding: variables.$padding-base;
+        border-bottom:ridge variables.$tertiary-color;
 
-                }
-            }
-
-            input, textarea {
-                width: 70%;
-                border: 1px solid #ccc;
-                border-radius: 25px;
-                padding: 8px;
-
-                @media (min-width:600px){
-                    width: 50%;
-                    padding: variables.$padding-base;
-                }
-            }
-
-            .button{
-                @include mixins.button-primary;
-                margin-top: 32px;
-                margin-bottom: variables.$padding-base;
-                max-width: 30%;
-            }
+        @media(min-width: 600px){
+            border:none;
         }
     }
 
-}
+    &__form{
 
-  
+        ul{
+            @media(min-width: 600px){
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                max-width: 60%;
+                margin: 32px auto;
+                gap: 16px;
+            }
+
+
+            li{
+                @include mixins.flex-center;
+
+                label {
+                    padding: 10px 0 ;
+                }
+
+                input, select {
+                    width: 100%;
+                    border: 1px solid variables.$secondary-color;
+                    padding: 8px;
+
+                    @media (min-width:600px){
+                        padding: variables.$padding-base;
+                    }
+                }
+
+                .button{
+                    @include mixins.button-primary;
+                    margin-top: 32px;
+                    margin-bottom: variables.$padding-base;
+                    width: 100%;
+                }
+
+
+            }
+        }
+    }
+}

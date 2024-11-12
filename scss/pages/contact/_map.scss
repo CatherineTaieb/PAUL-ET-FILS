@@ -1,0 +1,21 @@
+@use '../../abstracts/variables';
+@use '../../abstracts/mixins';
+
+
+.map{
+    width: 80%;
+    margin: variables.$padding-base auto;
+
+    @media(min-width:650px) {
+        width: 100%;
+    }
+
+    iframe{
+        width: 100%;
+        filter: sepia(50%);
+
+
+
+
+    }
+}

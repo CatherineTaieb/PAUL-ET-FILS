@@ -1,0 +1,30 @@
+@use '../../abstracts/variables';
+@use '../../abstracts/mixins';
+
+
+.secteur{
+
+@include mixins.flex-center;
+
+    &__title{
+        font-size: 2rem;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        &__left, &__right{
+            padding: variables.$padding-base;
+        }
+
+        li{
+            display: flex;
+            list-style: none;
+        }
+    }
+
+
+}

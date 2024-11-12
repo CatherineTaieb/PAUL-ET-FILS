@@ -1,0 +1,50 @@
+
+@use '../../abstracts/variables';
+@use '../../abstracts/mixins';
+
+
+.pagecontact__apropos{
+
+@include mixins.flex-center;
+height: 300px;
+
+    @media(min-width:650px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+
+    &__title{
+        @include mixins.flex-center;
+        background-color: variables.$background-color-secondary;
+        color: variables.$secondary-color;
+        text-align: center;
+        font-size: 3rem;
+        padding: variables.$padding-base;
+        font-weight: bold;
+
+        @media(min-width:650px) {
+            max-width: 50%;
+        }
+    }
+
+
+    &__content{
+        max-width: 70%;
+        padding: variables.$padding-base;
+        margin: variables.$padding-base;
+        font-size: 0.8rem;
+
+        @media(min-width:650px) {
+        display: flex;
+        flex-direction: row;
+        }
+    
+    }
+
+}
+
+
+

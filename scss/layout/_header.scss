@@ -8,7 +8,7 @@
 
  header {
      background-color: variables.$background-color;
-     padding: variables.$padding-base;
+     padding: 32px 0;
      @include mixins.flex-center;
 
      @media(min-width:650px) {
@@ -25,7 +25,6 @@
      }
 
      .devis{
-     width: 100px;
      height: 100px;
      @include mixins.flex-center;
 

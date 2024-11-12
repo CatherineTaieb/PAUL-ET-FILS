@@ -4,10 +4,10 @@
 
 .services{
 
-    margin: 32px;
-
     &__title{
         text-align: center;
+        margin: 32px;
+        font-size: 2rem;
     }
 
     &__block{
@@ -20,7 +20,6 @@
     }
 
     &__item{
-        border: solid 1px black;
         background-color: white;
         max-width: 100%;
         margin: 16px;
@@ -52,6 +51,9 @@
     &__button{
         @include mixins.button-primary;
         margin: variables.$padding-base;
+        background-color: variables.$background-color-secondary;
+        color: variables.$primary-color;
+        width: 20%;
     
     }
 

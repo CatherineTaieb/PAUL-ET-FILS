@@ -5,10 +5,62 @@
  @use '../abstracts/mixins';
 
 
- footer {
-     background-color: variables.$background-color;
-     font-size: 0.9rem;
-     padding: 8px;
-     @include mixins.flex-space-around;
- }
- 
+ .footer {
+    background-color: variables.$background-color;
+    color: variables.$secondary-color;
+    font-size: 0.9rem;
+
+        @media(min-width:800px) {
+            @include mixins.flex-space-around;
+        }
+
+
+    &__item{
+        padding: variables.$padding-base;
+        @include mixins.flex-center
+    }
+
+    h4{
+        padding-bottom: variables.$padding-base;
+    }
+
+    &__logo{
+        width: 150px;
+        margin: auto;
+
+        @media(min-width:800px) {
+            margin: 0;
+        }
+        
+        img{
+            max-width: 100%;
+        }
+    }
+
+
+    &__ressources{
+        li{
+            @include mixins.flex-center;
+
+            @media(min-width:800px) {
+               align-items: flex-start;
+            }
+        }
+    }
+
+
+
+    &__reseaux{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        svg{
+            fill: white ;
+            width: 24px;
+            height: 24px;
+            margin: variables.$padding-base;
+        }
+    }
+}

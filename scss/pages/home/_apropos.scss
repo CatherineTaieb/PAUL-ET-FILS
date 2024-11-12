@@ -4,34 +4,30 @@
 
 .apropos{
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
     @media(min-width:650px) {
         display: flex;
-        flex-direction: row;
     }
-
-
-    
 
     &__content{
         background-color: variables.$background-color-secondary;
         padding: variables.$padding-base;
-        height: 100%;
+
+        @media(min-width:650px) {
+            @include mixins.flex-center;
+            align-items: flex-start;
+            padding-left: 32px;
+        }
+
 
 
         h2,h3{
             color: variables.$secondary-color;
             font-size: 2rem;
-            line-height: 2rem;
         }
 
         p{
             text-align: justify;
-            padding: variables.$padding-base;
+            padding: 32px 0;
         }
 
     }

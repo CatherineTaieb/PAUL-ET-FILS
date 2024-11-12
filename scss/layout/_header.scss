@@ -17,6 +17,12 @@
         @include mixins.flex-space-around;
      }
 
+     .logo{
+        width: 150px;
+        img{
+            max-width: 100%;
+        }
+     }
 
      .devis{
      width: 100px;

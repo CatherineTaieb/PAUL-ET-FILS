@@ -1,0 +1,58 @@
+@use '../../abstracts/variables';
+@use '../../abstracts/mixins';
+
+
+.services{
+
+    margin: 32px;
+
+    &__title{
+        text-align: center;
+    }
+
+    &__block{
+    @media(min-width:600px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    }
+
+    &__item{
+        border: solid 1px black;
+        background-color: white;
+        max-width: 100%;
+        margin: 16px;
+
+        @media(min-width:600px){
+            max-width: 40%;
+        }
+
+    
+        &__image{
+            max-width: 100%;
+            margin: auto;
+
+            img{
+                max-width: 100%;
+                margin: 0;
+            }
+    
+        }
+
+        &__content{
+            max-width: 80%;
+            padding: variables.$padding-base;
+
+        }
+
+    }
+
+    &__button{
+        @include mixins.button-primary;
+        margin: variables.$padding-base;
+    
+    }
+
+}

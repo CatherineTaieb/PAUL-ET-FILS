@@ -41,7 +41,7 @@
 }
 
 
-@mixin button{
+@mixin button-primary{
     background-color: variables.$background-color-secondary;
     color: variables.$secondary-color;
     padding: variables.$padding-base;

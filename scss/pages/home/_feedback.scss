@@ -1,0 +1,37 @@
+@use '../../abstracts/variables';
+@use '../../abstracts/mixins';
+
+
+.feedback{
+    text-align: center;
+    margin: 32px 0;
+
+    &__title{
+        font-size: 2rem;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__icon{
+        width: 24px;
+        height: 24px;
+    }
+
+    &__text{
+        max-width: 70%;
+        margin: auto;
+
+    &__quote, &__author{
+        max-width: 70%;
+        margin: auto;
+        font-size: 0.8rem;
+    }
+
+    }
+
+}

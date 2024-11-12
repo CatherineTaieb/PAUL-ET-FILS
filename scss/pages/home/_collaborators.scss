@@ -1,0 +1,17 @@
+@use '../../abstracts/variables';
+@use '../../abstracts/mixins';
+
+
+.collaborators{
+
+    @include mixins.flex-space-around;
+    flex-wrap: wrap;
+    background-color: variables.$secondary-color;
+
+
+    img{
+        max-height: 100px;
+        padding: variables.$padding-base 0;
+    }
+
+}

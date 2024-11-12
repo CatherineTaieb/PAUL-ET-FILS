@@ -1,0 +1,59 @@
+@use '../../abstracts/variables';
+@use '../../abstracts/mixins';
+
+
+.promotion{
+color: variables.$secondary-color;
+text-align: center;
+
+
+
+    &__title{
+        background-image: url(../../../images/2hommes-portent-un-meuble.webp);
+        background-size: cover;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        @media(min-width:600px){
+            flex-direction: row;
+        }
+    
+        &__demenagement{
+            background-color: variables.$background-color;
+            padding: variables.$padding-base;
+            flex: 1;
+            width: 100%;
+        }
+
+        &__assurance{
+            background-color: variables.$background-color-secondary;
+            padding: variables.$padding-base;
+            flex: 1;
+            width: 100%;
+        }
+
+        &__recommandation{
+            background-color: variables.$secondary-color;
+            color: variables.$primary-color;
+            padding: variables.$padding-base;
+            flex: 1;
+            width: 100%;
+        }
+    
+    
+    }
+
+
+}

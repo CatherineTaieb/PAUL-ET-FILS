@@ -21,7 +21,6 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: black;
-  text-align: center;
 }
 
 /* Ce fichier contient les styles de base communs, comme les styles globaux des éléments HTML. */
@@ -30,10 +29,6 @@ a:visited,
 a:active {
   text-decoration: none;
   color: white;
-}
-
-img {
-  width: 100px;
 }
 
 iframe {
@@ -60,6 +55,12 @@ header {
     justify-content: space-around;
     align-items: center;
   }
+}
+header .logo {
+  width: 150px;
+}
+header .logo img {
+  max-width: 100%;
 }
 header .devis {
   width: 100px;
@@ -186,19 +187,181 @@ footer {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 650px) {
+  .apropos {
+    display: flex;
+    flex-direction: row;
+  }
+}
 .apropos__content {
-  width: 100%;
-  margin: auto;
   background-color: orange;
+  padding: 16px;
+  height: 100%;
 }
 .apropos__content h2, .apropos__content h3 {
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 .apropos__content p {
-  font-size: 0.8rem;
   text-align: justify;
   padding: 16px;
+}
+.apropos__button {
+  background-color: orange;
+  color: white;
+  padding: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: transform 0.3s;
+  margin-bottom: 16px;
+}
+.apropos__button:hover {
+  transform: scale(1.1);
+}
+.apropos__button:active {
+  transform: scale(0.9);
+}
+.apropos__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.services {
+  margin: 32px;
+}
+.services__title {
+  text-align: center;
+}
+@media (min-width: 600px) {
+  .services__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+.services__item {
+  border: solid 1px black;
+  background-color: white;
+  max-width: 100%;
+  margin: 16px;
+}
+@media (min-width: 600px) {
+  .services__item {
+    max-width: 40%;
+  }
+}
+.services__item__image {
+  max-width: 100%;
+  margin: auto;
+}
+.services__item__image img {
+  max-width: 100%;
+  margin: 0;
+}
+.services__item__content {
+  max-width: 80%;
+  padding: 16px;
+}
+.services__button {
+  background-color: orange;
+  color: white;
+  padding: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: transform 0.3s;
+  margin: 16px;
+}
+.services__button:hover {
+  transform: scale(1.1);
+}
+.services__button:active {
+  transform: scale(0.9);
+}
+
+.promotion {
+  color: white;
+  text-align: center;
+}
+.promotion__title {
+  background-image: url(../../../images/2hommes-portent-un-meuble.webp);
+  background-size: cover;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.promotion__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .promotion__item {
+    flex-direction: row;
+  }
+}
+.promotion__item__demenagement {
+  background-color: black;
+  padding: 16px;
+  flex: 1;
+  width: 100%;
+}
+.promotion__item__assurance {
+  background-color: orange;
+  padding: 16px;
+  flex: 1;
+  width: 100%;
+}
+.promotion__item__recommandation {
+  background-color: white;
+  color: black;
+  padding: 16px;
+  flex: 1;
+  width: 100%;
+}
+
+.feedback {
+  text-align: center;
+  margin: 32px 0;
+}
+.feedback__title {
+  font-size: 2rem;
+}
+.feedback__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.feedback__icon {
+  width: 24px;
+  height: 24px;
+}
+.feedback__text {
+  max-width: 70%;
+  margin: auto;
+}
+.feedback__text__quote, .feedback__text__author {
+  max-width: 70%;
+  margin: auto;
+  font-size: 0.8rem;
+}
+
+.collaborators {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: white;
+}
+.collaborators img {
+  max-height: 100px;
+  padding: 16px 0;
 }
 
 /* FORMULAIRE DE CONTACT */

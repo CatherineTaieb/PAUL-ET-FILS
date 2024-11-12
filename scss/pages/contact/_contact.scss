@@ -48,7 +48,7 @@
             }
 
             .button{
-                @include mixins.button;
+                @include mixins.button-primary;
                 margin-top: 32px;
                 margin-bottom: variables.$padding-base;
                 max-width: 30%;

@@ -1,0 +1,18 @@
+/* Ce fichier définit les styles de typographie de base comme les polices, les tailles de texte et les styles de titre.
+ */
+
+
+ @use '../abstracts/mixins';
+ @use '../abstracts/variables';
+
+
+
+
+ body {
+     font-family: variables.$font-family-base;
+     font-size: variables.$font-size-basic;
+     line-height: 1.5;
+     color: variables.$primary-color;
+     text-align: center;
+ }
+ 

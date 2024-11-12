@@ -1,0 +1,262 @@
+@charset "UTF-8";
+/* Ce fichier contient des variables SCSS utilisées à travers tout le projet, comme les couleurs, les polices et les espacements. 
+
+On les déclare avec : $nomdevariable : valeur souhaitée*/
+/* Ce fichier contient des mixins, qui sont des blocs de styles réutilisables. */
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Ce fichier définit les styles de typographie de base comme les polices, les tailles de texte et les styles de titre.
+ */
+body {
+  font-family: "Arial";
+  font-size: 16px;
+  line-height: 1.5;
+  color: black;
+  text-align: center;
+}
+
+/* Ce fichier contient les styles de base communs, comme les styles globaux des éléments HTML. */
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  width: 100px;
+}
+
+iframe {
+  width: 100%;
+}
+
+/* Ce dossier contient les styles de mise en page globaux pour l'en-tête, le pied de page, la navigation, etc.
+ */
+/* Ce fichier contient les styles spécifiques à l'en-tête du site.
+ */
+header {
+  background-color: black;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 650px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+header .devis {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .devis p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  height: 100%;
+  padding: 16px;
+}
+
+/* Ce fichier contient les styles spécifiques au pied de page.
+ */
+footer {
+  background-color: black;
+  font-size: 0.9rem;
+  padding: 8px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Ce fichier contient les styles pour la navigation, comme les barres de menu. */
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation ul {
+  display: flex;
+  flex-direction: row;
+}
+.navigation ul li {
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px;
+}
+@media (max-width: 800px) {
+  .navigation ul {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .navigation ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.navigation li {
+  list-style: none;
+}
+.navigation a:link,
+.navigation a:visited,
+.navigation a:active {
+  color: white;
+}
+
+.hero {
+  background-image: url(../../../images/homme-carton-camionnette.webp);
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 650px) {
+  .hero {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+.hero__title {
+  color: white;
+  font-size: 1.5rem;
+  padding: 16px;
+  font-weight: bold;
+}
+@media (min-width: 650px) {
+  .hero__title {
+    max-width: 50%;
+  }
+}
+.hero__content {
+  max-width: 70%;
+  padding: 16px;
+  margin: 16px;
+  font-size: 0.8rem;
+}
+@media (min-width: 650px) {
+  .hero__content {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.hero__content h4 {
+  padding: 16px;
+}
+.hero__content p {
+  padding: 16px;
+}
+.hero__tel {
+  background-color: black;
+  color: white;
+}
+.hero__devis {
+  background-color: orange;
+  color: black;
+}
+
+.apropos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.apropos__content {
+  width: 100%;
+  margin: auto;
+  background-color: orange;
+}
+.apropos__content h2, .apropos__content h3 {
+  color: white;
+  font-size: 1.5rem;
+}
+.apropos__content p {
+  font-size: 0.8rem;
+  text-align: justify;
+  padding: 16px;
+}
+
+/* FORMULAIRE DE CONTACT */
+.formulaire {
+  background-color: white;
+  border: ridge #ff6f61;
+  border-radius: 10%;
+  margin: 32px auto;
+  width: 80%;
+}
+@media (min-width: 600px) {
+  .formulaire {
+    width: 50%;
+  }
+}
+.formulaire ul li {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formulaire ul li label {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 8px 0;
+}
+@media (min-width: 600px) {
+  .formulaire ul li label {
+    padding: 10px 0;
+  }
+}
+.formulaire ul li input, .formulaire ul li textarea {
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 8px;
+}
+@media (min-width: 600px) {
+  .formulaire ul li input, .formulaire ul li textarea {
+    width: 50%;
+    padding: 16px;
+  }
+}
+.formulaire ul li .button {
+  background-color: orange;
+  color: white;
+  padding: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: transform 0.3s;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  max-width: 30%;
+}
+.formulaire ul li .button:hover {
+  transform: scale(1.1);
+}
+.formulaire ul li .button:active {
+  transform: scale(0.9);
+}/*# sourceMappingURL=main.css.map */

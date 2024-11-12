@@ -1,0 +1,35 @@
+/* Ce fichier contient les styles spécifiques à l'en-tête du site.
+ */
+
+
+ @use '../abstracts/variables';
+ @use '../abstracts/mixins';
+
+
+ header {
+     background-color: variables.$background-color;
+     padding: variables.$padding-base;
+     @include mixins.flex-center;
+
+     @media(min-width:650px) {
+        display: flex;
+        flex-direction: row;
+        @include mixins.flex-space-around;
+     }
+
+
+     .devis{
+     width: 100px;
+     height: 100px;
+     @include mixins.flex-center;
+
+
+
+        p{
+            @include mixins.flex-center;
+            background-color: variables.$background-color-secondary;
+            height: 100%;
+            padding: variables.$padding-base;
+        }
+    }
+ }

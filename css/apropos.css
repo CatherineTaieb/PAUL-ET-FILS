@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* Ce fichier contient des variables SCSS utilisées à travers tout le projet, comme les couleurs, les polices et les espacements. 
+
+On les déclare avec : $nomdevariable : valeur souhaitée*/
+/* Ce fichier contient des mixins, qui sont des blocs de styles réutilisables. */
+.apropos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.apropos__content {
+  width: 100%;
+  margin: auto;
+  background-color: orange;
+}
+.apropos__content h2, .apropos__content h3 {
+  color: white;
+  font-size: 1.5rem;
+}
+.apropos__content p {
+  font-size: 0.8rem;
+  text-align: justify;
+  padding: 16px;
+}/*# sourceMappingURL=apropos.css.map */

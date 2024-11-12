@@ -1,0 +1,14 @@
+/* Ce fichier contient les styles spécifiques au pied de page.
+ */
+
+ @use '../abstracts/variables';
+ @use '../abstracts/mixins';
+
+
+ footer {
+     background-color: variables.$background-color;
+     font-size: 0.9rem;
+     padding: 8px;
+     @include mixins.flex-space-around;
+ }
+ 

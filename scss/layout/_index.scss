@@ -1,0 +1,10 @@
+/* Ce dossier contient les styles de mise en page globaux pour l'en-tête, le pied de page, la navigation, etc.
+ */
+
+
+ @use '../abstracts/variables';
+ @use '../abstracts/mixins';
+ @forward 'header';
+ @forward 'footer';
+ @forward 'navigation';
+ 

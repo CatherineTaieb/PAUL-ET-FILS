@@ -1,0 +1,63 @@
+@use '../../abstracts/variables';
+@use '../../abstracts/mixins';
+
+
+.hero{
+
+    background-image: url(../../../images/homme-carton-camionnette.webp);
+    background-position:center;
+    background-size: cover;
+    height: 500px;
+    @include mixins.flex-center;
+
+
+    @media(min-width:650px) {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+
+    &__title{
+        color: variables.$secondary-color;
+        font-size: 1.5rem;
+        padding: variables.$padding-base;
+        font-weight: bold;
+
+        @media(min-width:650px) {
+            max-width: 50%;
+        }
+    }
+
+
+    &__content{
+        max-width: 70%;
+        padding: variables.$padding-base;
+        margin: variables.$padding-base;
+        font-size: 0.8rem;
+
+        @media(min-width:650px) {
+        display: flex;
+        flex-direction: row;
+        }
+        
+        h4{
+            padding: variables.$padding-base;
+        }
+        
+        p{
+            padding: variables.$padding-base;
+        }
+    }
+
+    &__tel{
+        background-color: variables.$background-color;
+        color: variables.$secondary-color;
+    }
+
+    &__devis{
+        background-color: variables.$background-color-secondary;
+        color: variables.$primary-color;
+    }
+
+
+}

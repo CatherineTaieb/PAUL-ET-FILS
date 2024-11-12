@@ -1,0 +1,25 @@
+/* Ce fichier contient les styles de base communs, comme les styles globaux des éléments HTML. */
+
+
+
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+
+
+a:link,
+a:visited,
+a:active {
+text-decoration: none;
+color: variables.$secondary-color;
+}
+
+
+img{
+    width: 100px;
+}
+
+
+iframe{
+    width: 100%;
+}

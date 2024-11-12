@@ -1,0 +1,18 @@
+/* Ce fichier contient les styles pour la navigation, comme les barres de menu. */
+
+ @use '../abstracts/variables';
+ @use '../abstracts/mixins';
+
+
+
+.navigation{
+
+@include mixins.nav-align;
+
+a:link,
+a:visited,
+a:active {
+color: variables.$secondary-color;
+}
+
+}

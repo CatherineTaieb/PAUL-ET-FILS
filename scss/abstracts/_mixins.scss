@@ -1,0 +1,81 @@
+/* Ce fichier contient des mixins, qui sont des blocs de styles réutilisables. */
+
+@use '../abstracts/variables';
+
+
+
+
+@mixin nav-align{
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+
+    ul{
+        display: flex;
+        flex-direction: row;
+       
+        li{
+        justify-content: space-around;
+        align-items: center;
+        padding: variables.$padding-base;
+        }
+
+       
+        @media(max-width:800px) {
+        width: 100%;
+        }
+
+        @media(max-width:500px) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            }
+    }
+
+    li{
+		list-style: none;
+       
+	}
+}
+
+
+@mixin button{
+    background-color: variables.$background-color-secondary;
+    color: variables.$secondary-color;
+    padding: variables.$padding-base;
+    cursor:pointer;
+    border-radius: 15px;
+    transition: transform 0.3s;
+
+    &:hover{
+        transform : scale(1.1);
+    }
+
+    &:active{
+        transform : scale(0.9);
+    }
+}
+
+
+
+
+@mixin flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@mixin flex-space-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin transition($property) {
+    transition: $property 0.3s ease-in-out;
+}
